@@ -7,13 +7,17 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "dfproject-spotifyazure"
 		},
+		"AzureDataLakeStorageSpotify_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageSpotify'"
+		},
 		"AzureSqlDatabaseSpotify_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseSpotify'"
 		},
-		"AzureDataLakeStorageSpotify_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageSpotify'"
+		"AzureDataLakeStorageSpotify_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://spotifyazure.dfs.core.windows.net/"
 		},
 		"AzureSqlDatabaseSpotify_properties_typeProperties_server": {
 			"type": "string",
@@ -26,10 +30,6 @@
 		"AzureSqlDatabaseSpotify_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "adminakash"
-		},
-		"AzureDataLakeStorageSpotify_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://spotifyazure.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -58,11 +58,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureDataLakeStorageSpotify_accountKey": {
+						"value": "[parameters('AzureDataLakeStorageSpotify_accountKey')]"
+					},
 					"AzureSqlDatabaseSpotify_password": {
 						"value": "[parameters('AzureSqlDatabaseSpotify_password')]"
 					},
-					"AzureDataLakeStorageSpotify_accountKey": {
-						"value": "[parameters('AzureDataLakeStorageSpotify_accountKey')]"
+					"AzureDataLakeStorageSpotify_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorageSpotify_properties_typeProperties_url')]"
 					},
 					"AzureSqlDatabaseSpotify_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabaseSpotify_properties_typeProperties_server')]"
@@ -72,9 +75,6 @@
 					},
 					"AzureSqlDatabaseSpotify_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabaseSpotify_properties_typeProperties_userName')]"
-					},
-					"AzureDataLakeStorageSpotify_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorageSpotify_properties_typeProperties_url')]"
 					}
 				}
 			},

@@ -5,11 +5,14 @@
 		"factoryName": {
 			"value": "dfproject-spotifyazure"
 		},
+		"AzureDataLakeStorageSpotify_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabaseSpotify_password": {
 			"value": ""
 		},
-		"AzureDataLakeStorageSpotify_accountKey": {
-			"value": ""
+		"AzureDataLakeStorageSpotify_properties_typeProperties_url": {
+			"value": "https://spotifyazure.dfs.core.windows.net/"
 		},
 		"AzureSqlDatabaseSpotify_properties_typeProperties_server": {
 			"value": "sqlserverakash.database.windows.net"
@@ -19,9 +22,6 @@
 		},
 		"AzureSqlDatabaseSpotify_properties_typeProperties_userName": {
 			"value": "adminakash"
-		},
-		"AzureDataLakeStorageSpotify_properties_typeProperties_url": {
-			"value": "https://spotifyazure.dfs.core.windows.net/"
 		}
 	}
 }
